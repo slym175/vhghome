@@ -41,7 +41,7 @@
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="shop.html">Product</a></li>
-                                    <li><a href="aboutus.html">About us</a></li>
+                                    <li><a href="about.html">About us</a></li>
                                     <li><a href="contact.html">Contact us</a></li>
                                 </ul>
                             </nav>
@@ -69,12 +69,59 @@
     <main>
         <!--? slider Area Start -->
         <section class="slider-area ">
-            <div class="sa-banner">
-                <img class="img-fluid" src="./assets/img/799 1.png" alt="Banner">
+            <div class="sa-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3768085828365!2d105.84041481540221!3d21.017603793533898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8fa423db9d%3A0x9fee4bfcafaf2299!2zVMOyYSBuaMOgIFZp4buHdCBI4buTbmc!5e0!3m2!1svi!2s!4v1595489149549!5m2!1svi!2s"
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
             </div>
         </section>
         <!-- slider Area End-->
-        
+        <section class="contact-form">
+            <div class="container mt-nega-100 pb-100">
+                <div class="container-fluid cf-container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 cfc-contact">
+                            <h3>Contact</h3>
+                            <p>Tell us about your issue so we can help you more quickly.</p>
+                            <form action="#" method="POST">
+                                <input type="text" name="name" class="form-control cf-input" placeholder="Name">
+                                <input type="email" name="email" class="form-control cf-input" placeholder="Email">
+                                <input type="text" name="message" class="form-control cf-input" placeholder="Message">
+                                <button type="submit" class="btn cf-button">Send <i class="fa fa-paper-plane ml-2" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-12 cfc-info">
+                            <div>
+                                <h3 class="mb-3">Info</h3>
+                                <div class="d-flex justify-content-start align-items-start mb-2">
+                                    <img class="mr-3" src="./assets/img/address 1.png" alt="Icon">
+                                    <div>
+                                        <h4>Head Office:</h4>
+                                        <p>Viet Hong building, 58 Tran Nhan Tong St, Hai Ba Trung Dist, Ha Noi City, Vietnam</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-start mb-2">
+                                    <img class="mr-3" src="./assets/img/Group 127.png" alt="Icon">
+                                    <div>
+                                        <h4>Tel:</h4>
+                                        <p>+84-24 3822 1997</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-start mb-2">
+                                    <img class="mr-3" src="./assets/img/Page 1.png" alt="Icon">
+                                    <div>
+                                        <h4>Email:</h4>
+                                        <p>contact@vhg.vn</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <!-- Footer Start-->
@@ -115,7 +162,9 @@
                         </li>
                     </ul>
                     <p class="copyright">
-                        &copy;<script>document.write(new Date().getFullYear());</script> by <a href="https://colorlib.com" target="_blank">Nanoweb</a>
+                        &copy;<script>
+                            document.write(new Date().getFullYear());
+                        </script> by <a href="https://colorlib.com" target="_blank">Nanoweb</a>
                     </p>
                 </div>
             </div>
