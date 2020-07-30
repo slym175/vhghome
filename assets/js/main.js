@@ -550,4 +550,72 @@
     autoplayHoverPause: true,
   });
 
+  var sync1 = jQuery("#carousel-1");
+  var sync2 = jQuery("#carousel-2");
+  var syncedSecondary = true;
+
+  sync1.owlCarousel({
+    items: 1,
+    slideSpeed: 2000,
+    autoplay: false,
+    autoplayTimeout: 2000,
+    loop: true,
+    nav: true,
+    autoHeight: true,
+    responsiveRefreshRate: 200,
+    onChanged: syncPosition,
+  });
+
+  sync2.owlCarousel({
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 7
+      }
+    },
+    dots: false,
+    nav: false,
+    smartSpeed: 200,
+    slideSpeed: 500,
+    margin: 5,
+    loop: true,
+    autoWidth: true,
+    responsiveRefreshRate: 100,
+    onInitialized: function () {
+      sync2.find(".owl-item").eq(0).addClass("synced");
+    },
+    onChanged: syncPosition2
+  });
+
+  function syncPosition(el) {
+    var count = el.item.count - 1;
+    var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+    if (current < 0) {
+      current = count;
+    }
+    if (current > count) {
+      current = 0;
+    }
+    sync2.find(".owl-item").removeClass("synced").eq(current).addClass("synced");
+    sync2.trigger('to.owl.carousel', [current, 100, true]);
+  }
+
+  function syncPosition2(el) {
+    if (syncedSecondary) {
+      var number = el.item.index;
+      sync1.trigger('to.owl.carousel', [number, 100, true]);
+    }
+  }
+
+  sync2.on("click", ".owl-item", function (e) {
+    e.preventDefault();
+    var number = jQuery(this).index();
+    sync1.trigger('to.owl.carousel', [number, 100, true]);
+  });
+
 })(jQuery);
