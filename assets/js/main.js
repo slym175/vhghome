@@ -1,8 +1,8 @@
-(function ($) {
+(function (jQuery) {
   "use strict"
 
   // mobile_menu
-  var menu = $('ul#navigation');
+  var menu = jQuery('ul#navigation');
   if (menu.length) {
     menu.slicknav({
       prependTo: '.mobile_menu',
@@ -15,28 +15,28 @@
   };
 
   /* 7.  Custom Sticky Menu  */
-  $(window).on('scroll', function () {
-    var scroll = $(window).scrollTop();
+  jQuery(window).on('scroll', function () {
+    var scroll = jQuery(window).scrollTop();
     if (scroll < 245) {
-      $(".header-sticky").removeClass("sticky-bar");
+      jQuery(".header-sticky").removeClass("sticky-bar");
     } else {
-      $(".header-sticky").addClass("sticky-bar");
+      jQuery(".header-sticky").addClass("sticky-bar");
     }
   });
 
-  $(window).on('scroll', function () {
-    var scroll = $(window).scrollTop();
+  jQuery(window).on('scroll', function () {
+    var scroll = jQuery(window).scrollTop();
     if (scroll < 245) {
-      $(".header-sticky").removeClass("sticky");
+      jQuery(".header-sticky").removeClass("sticky");
     } else {
-      $(".header-sticky").addClass("sticky");
+      jQuery(".header-sticky").addClass("sticky");
     }
   });
 
 
 
   /* 8. sildeBar scroll */
-  $.scrollUp({
+  jQuery.scrollUp({
     scrollName: 'scrollUp', // Element ID
     topDistance: '300', // Distance from top before showing element (px)
     topSpeed: 300, // Speed back to top (ms)
@@ -49,8 +49,8 @@
 
 
   /* 9. data-background */
-  $("[data-background]").each(function () {
-    $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
+  jQuery("[data-background]").each(function () {
+    jQuery(this).css("background-image", "url(" + jQuery(this).attr("data-background") + ")")
   });
 
 
@@ -60,41 +60,41 @@
   /* ----------------- Other Inner page Start ------------------ */
 
   // menu fixed js code
-  $(window).scroll(function () {
-    var window_top = $(window).scrollTop() + 1;
+  jQuery(window).scroll(function () {
+    var window_top = jQuery(window).scrollTop() + 1;
     if (window_top > 50) {
-      $('.main_menu').addClass('menu_fixed animated fadeInDown');
+      jQuery('.main_menu').addClass('menu_fixed animated fadeInDown');
     } else {
-      $('.main_menu').removeClass('menu_fixed animated fadeInDown');
+      jQuery('.main_menu').removeClass('menu_fixed animated fadeInDown');
     }
   });
 
-  // $('.counter').counterUp({
+  // jQuery('.counter').counterUp({
   //   time: 2000
   // });
 
   // Search Toggle
-  $("#search_input_box").hide();
-  $("#search_1").on("click", function () {
-    $("#search_input_box").slideToggle();
-    $("#search_input").focus();
+  jQuery("#search_input_box").hide();
+  jQuery("#search_1").on("click", function () {
+    jQuery("#search_input_box").slideToggle();
+    jQuery("#search_input").focus();
   });
-  $("#close_search").on("click", function (e) {
+  jQuery("#close_search").on("click", function (e) {
     e.preventDefault();
-    $('#search_input_box').slideUp(500);
+    jQuery('#search_input_box').slideUp(500);
   });
   /* ----------------- Other Inner page End ------------------ */
 
   // Modal Activation
-  $('.search-switch').on('click', function (e) {
+  jQuery('.search-switch').on('click', function (e) {
     e.preventDefault();
-    $('.search-model-box').fadeIn(400);
+    jQuery('.search-model-box').fadeIn(400);
   });
 
-  $('.search-close-btn').on('click', function (e) {
+  jQuery('.search-close-btn').on('click', function (e) {
     e.preventDefault();
-    $('.search-model-box').fadeOut(400, function () {
-      $('#search-input').val('');
+    jQuery('.search-model-box').fadeOut(400, function () {
+      jQuery('#search-input').val('');
     });
   });
 
@@ -106,8 +106,8 @@
     autoplayHoverPause: true,
   });
 
-  var sync1 = $("#carousel-1");
-    var sync2 = $("#carousel-2");
+  var sync1 = jQuery("#carousel-1");
+    var sync2 = jQuery("#carousel-2");
     var slidesPerPage = 5; 
     var syncedSecondary = true;
 
@@ -163,7 +163,7 @@
 
     sync2.on("click", ".owl-item", function(e) {
         e.preventDefault();
-        var number = $(this).index();
+        var number = jQuery(this).index();
         sync1.trigger('to.owl.carousel', [number, 100, true]);
     });
 
