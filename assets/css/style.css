@@ -3020,7 +3020,7 @@ input:focus {
 }
 
 .slider-area {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .slider-area .hero__img {
@@ -3887,14 +3887,18 @@ input:focus {
 /* end list san pham */
 
 /* start chi tiet san pham */
-.dm-top #carousel-1 .owl-nav,
-.dm-top #carousel-1 .owl-dots {
+.dm-top#carousel-1 .owl-nav,
+.dm-top#carousel-1 .owl-dots {
     display: none;
 }
 
 .dm-bottom {
     padding: .8rem 0;
 }
+
+/* .dmb-row {
+    border-bottom: 1px solid #C4C4C4;
+} */
 
 .dm-bottom .dmb-product-name {
     font-family: "Helvetica Neue";
@@ -3919,7 +3923,7 @@ input:focus {
 }
 
 .dm-bottom #carousel-2, .dm-bottom #carousel-2 .owl-stage-outer, .dm-bottom #carousel-2 .owl-stage-outer .owl-stage{
-    height: 64px;
+    height: 72px;
     width: auto;
 }
 
@@ -3947,12 +3951,243 @@ input:focus {
         margin-bottom: .5rem;
     }
 }
+
+.product-detail {
+    padding: 1rem 0;
+}
+
+.product-detail .pd-nav {
+    border-bottom: unset;
+}
+
+.product-detail .pd-nav .pdn-item .nav-link {
+    border: unset;
+}
+
+.product-detail .pd-nav .pdn-item .nav-link span{
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 4px;
+}
+
+.product-detail .pd-nav .pdn-item .nav-link.active span,
+.product-detail .pd-nav .pdn-item .nav-link:active span,
+.product-detail .pd-nav .pdn-item .nav-link:hover span{
+    color: #1F4386;
+    border-bottom: 2px solid #079147;
+}
+
+.product-detail .pd-tab {
+    padding: 1rem 0;
+}
+
+.s-share {
+    margin-bottom: 1rem;
+}
+
+.s-share h4{
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-align: center;
+    color: #B8BBCB;
+    text-transform: uppercase;
+}
+
+.s-share .ss-nav {
+    justify-content: center;
+    align-items: center;
+}
+
+.s-share .ss-nav .nav-link{
+    color: #B8BBCB;
+}
+
+.product-navigation {
+    margin-bottom: 1rem;
+}
+
+.product-navigation .pn-container {
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.product-navigation .pn-container .pnc-left {
+    border-right: 1px solid #C4C4C4;
+    padding: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product-navigation .pn-container .pnc-right {
+    padding: .8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.product-navigation .pn-container .pnc-left .pnc-left_image,
+.product-navigation .pn-container .pnc-right .pnc-right_image {
+    height: 80px;
+}
+
+.product-navigation .pn-container .pnc-left .pnc-left_image {
+    padding-right: 1rem;
+}
+
+.product-navigation .pn-container .pnc-right .pnc-right_image {
+    padding-left: 1rem;
+}
+
+.product-navigation .pn-container .pnc-left .pnc-left_image img,
+.product-navigation .pn-container .pnc-right .pnc-right_image img{
+    height: 100%;
+    width: auto;
+}
+
+.product-navigation .pn-container .pnc-left .pnc-left_button a,
+.product-navigation .pn-container .pnc-right .pnc-right_button a{
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #1F4386;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-navigation .pn-container .pnc-left .pnc-left_button a img,
+.product-navigation .pn-container .pnc-right .pnc-right_button a img{
+    padding: 0 1rem;
+}
+
+.product-navigation .pn-container .pnc-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+}
+
+.product-navigation .pn-container .pnc-center-text h4{
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #1F4386;
+}
+
+.product-relative {
+    padding: 1rem 0;
+}
+
+.product-relative .pr-title {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #1F4386;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .product-relative .pr-item {
+        margin-bottom: 1rem;
+    }
+}
+
+.product-relative .pr-item .pri-container {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-relative .pr-item .pri-container:hover .pri-container_overlay {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.product-relative .pr-item .pri-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+@media only screen and (max-width: 1199px) {
+    .product-relative .pr-item .pri-container .pri-container_overlay {
+        
+    }
+}
+
+.product-relative .pr-item .pri-container .pri-container_overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.65);
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: height 2s, width 2s;
+}
+
+.product-relative .pr-item .pri-container .pri-container_overlay h4 {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #1F4386;
+}
+
+.product-relative .pr-item .pri-container .pri-container_overlay img {
+    width: 30px;
+    height: 30px;
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .product-relative .pr-item .pri-container {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .product-relative .pr-item .pri-container {
+        height: 300px;
+    }
+}
 /* end chi tiet san pham */
 
 /* start footer */
 .footer-area {
     background: #1F4386;
-    font-family: Helvetica Neue;
+    font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
