@@ -1,12 +1,3 @@
-:root {
-    --random-height: ;
-    --random-width: ;
-    --random-m-top: ;
-    --random-m-right: ;
-    --random-m-bottom: ;
-    --random-m-left: ;
-}
-
 @font-face {
     font-family: 'Helvetica Neue';
     src: url(../fonts/HelveticaNeue/HelveticaNeue.ttf);
@@ -32,6 +23,8 @@ html,
 body {
     scroll-behavior: smooth;
     overflow: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .white-bg {
@@ -576,11 +569,7 @@ input:focus::-moz-placeholder {
 }
 
 .copyright {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
+    font: normal normal 18px/21px "Helvetica Neue";
     color: #FFFFFF;
     margin-top: 1rem;
 }
@@ -3039,9 +3028,10 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40%;
+    font: normal normal 18px/21px "Helvetica Neue";
+    width: 45%;
     margin-top: 1rem;
-    padding: 1.2rem 3rem;
+    padding: 1.2rem 2.5rem;
     background-color: #1F4386;
     color: white;
     font-weight: bold;
@@ -3053,6 +3043,11 @@ input:focus {
     outline: 2px solid #1F4386;
     background-color: white;
     color: #1F4386;
+}
+
+.btn-app img{
+    height: 12px !important;
+    width: auto !important;
 }
 
 .head-underscore {
@@ -3069,11 +3064,12 @@ input:focus {
 .head-underscore::before {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 50%;
     height: 3px;
     background-color: #079147;
     bottom: 0;
-    transform: translate(80%, 100%);
+    left: 50%;
+    transform: translate(-50%, 100%);
 }
 
 /* start newest collection section */
@@ -3110,22 +3106,14 @@ input:focus {
 .newest-collection .nc-body .ncb-item h4 {
     margin-top: 1rem;
     text-align: center;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
+    font: normal bold 24px/29px "Helvetica Neue";
     color: #1F4386;
 }
 
 .newest-collection .nc-body .ncb-item p {
     margin-top: .3rem;
     text-align: center;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
+    font: normal bold 18px/21px "Helvetica Neue";
     color: #3A3732;
 }
 
@@ -3145,15 +3133,25 @@ input:focus {
     margin: 1rem 0;
 }
 
-.all-collection .ac-body .acb-right p {
+.all-collection .ac-body .acb-right .m-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 50%;
-    margin: 1rem 0;
+}
+
+.all-collection .ac-body .acb-right p {
+    margin: 2rem 0 1rem 0;
     text-align: center;
     line-height: 1.5;
+    width: 65%;
 }
 
 .all-collection .ac-body .acb-right a {
     margin-bottom: 1rem;
+    width: 45%;
+    padding: 1rem 1.8rem;
 }
 
 .all-collection .ac-body .acb-left {
@@ -3164,6 +3162,30 @@ input:focus {
     opacity: .8;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .all-collection .ac-body .acb-right .m-width {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .all-collection .ac-body .acb-right .m-width {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .all-collection .ac-body .acb-right .m-width {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .all-collection .ac-body .acb-right .m-width {
+        width: 100%;
+    }
+}
+
 /* end all collection section */
 
 
@@ -3172,7 +3194,7 @@ input:focus {
     padding: 250px 0;
 }
 
-.newest-catalog:hover {
+.newest-catalog:hover{
     opacity: .8;
 }
 
@@ -3184,11 +3206,7 @@ input:focus {
 }
 
 .newest-catalog .ncat-body h4 {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 51px;
+    font: normal bold 42px/51px "Helvetica Neue";
     color: #FFFFFF;
 }
 
@@ -3224,20 +3242,15 @@ input:focus {
     position: absolute;
     top: 50%;
     left: 25%;
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
+    font: normal bold 36px/44px "Helvetica Neue";
     color: #FFFFFF;
     transform: translate(-50%, -50%);
 }
 
 .about-section {
-    font-family: Helvetica Neue;
+    font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: normal;
-    background-image: linear-gradient(180deg, #FFFFFF, #F4FAFF);
 }
 
 .about-section h1,
@@ -3247,11 +3260,7 @@ input:focus {
 .about-section h5,
 .about-section h6 {
     position: relative;
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
+    font: normal bold 24px/29px "Helvetica Neue";
     color: #1F4386;
     margin-left: 50px;
 }
@@ -3272,13 +3281,8 @@ input:focus {
 }
 
 .about-section p {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font: normal normal 14px/17px "Helvetica Neue";
     color: #000000;
-    text-align: justify;
     margin-bottom: 1rem;
 }
 
@@ -3286,6 +3290,17 @@ input:focus {
 .about-section .as-style,
 .about-section .as-value {
     padding: 1rem 0;
+    position: relative;
+}
+
+.about-section .as-quantity::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 70%;
+    left: 0;
+    background-color: #F4FAFF;
 }
 
 .about-section .as-quantity .as-img-container,
@@ -3381,7 +3396,7 @@ input:focus {
         justify-content: space-between;
         width: 50%;
         margin-top: 1rem;
-        padding: .6rem 1.5rem;
+        padding: 1rem 1.5rem;
         font-weight: 14;
         background-color: #1F4386;
         color: white;
@@ -3455,11 +3470,7 @@ input:focus {
 
 /* start list danh muc */
 .category-main .cm-title {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 44px;
+    font: normal bold 36px/44px "Helvetica Neue";
     color: #1F4386;
     position: relative;
     text-align: center;
@@ -3520,11 +3531,7 @@ input:focus {
 }
 
 .category-main .cmg-item .cmg-content-container .cmg-title {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
+    font: normal bold 24px/29px "Helvetica Neue";
     text-align: center;
     color: #1F4386;
     margin-top: 1rem;
@@ -3541,16 +3548,16 @@ input:focus {
     text-align: center;
 }
 
-.category-main .cm-pagination {
+.section-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
 }
 
-.category-main .cm-pagination .cmp-next,
-.category-main .cm-pagination .cmp-prev,
-.category-main .cm-pagination .cmp-page {
+.section-pagination .sp-next,
+.section-pagination .sp-prev,
+.section-pagination .sp-page {
     font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: normal;
@@ -3559,9 +3566,9 @@ input:focus {
     color: #343434;
 }
 
-.category-main .cm-pagination .cmp-next a,
-.category-main .cm-pagination .cmp-prev a,
-.category-main .cm-pagination .cmp-page a {
+.section-pagination .sp-next a,
+.section-pagination .sp-prev a,
+.section-pagination .sp-page a {
     font-family: inherit;
     font-style: inherit;
     font-weight: inherit;
@@ -3571,24 +3578,20 @@ input:focus {
     text-align: center;
 }
 
-.category-main .cm-pagination .cmp-page {
+.section-pagination .sp-page {
     margin: 0 .5rem;
 }
 
-.category-main .cm-pagination .cmp-page.current {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
+.section-pagination .sp-page.current {
+    font: normal normal 18px/21px "Helvetica Neue";
     color: #1F4386;
     border-bottom: 1px solid #1F4386;
 }
 
-/* .category-main .cm-pagination .cmp-page:first-child.current + .cmp-prev,
-.category-main .cm-pagination .cmp-page:last-child.current + .cmp-next {
+.section-pagination .sp-pages .sp-page:first-child
+.section-pagination .sp-pages .sp-page:last-child {
     display: none;
-} */
+}
 
 @media only screen and (max-width: 600px) {
     .category-main .cm-gallery {
@@ -3602,11 +3605,8 @@ input:focus {
 
 /* start list san pham */
 .list-product .lp-title {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 44px;
+    font-family: "Helvetica Neue";
+    font: normal bold 36px/44px "Helvetica Neue";
     color: #1F4386;
     position: relative;
     text-align: center;
@@ -3649,7 +3649,7 @@ input:focus {
 .list-product .lpg-item {
     width: 100%;
     height: auto;
-    margin: 0 0 5px 0;
+    margin: 0 0 1rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -3684,50 +3684,6 @@ input:focus {
     color: #1F4386;
     text-align: center;
     margin: 1rem 0;
-}
-
-.list-product .lp-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.list-product .lp-pagination .lpp-next,
-.list-product .lp-pagination .lpp-prev,
-.list-product .lp-pagination .lpp-page {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    color: #343434;
-}
-
-.list-product .lp-pagination .lpp-next a,
-.list-product .lp-pagination .lpp-prev a,
-.list-product .lp-pagination .lpp-page a {
-    font-family: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-    text-align: center;
-}
-
-.list-product .lp-pagination .lpp-page {
-    margin: 0 .5rem;
-}
-
-.list-product .lp-pagination .lpp-page.current {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    color: #1F4386;
-    border-bottom: 1px solid #1F4386;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3765,6 +3721,10 @@ input:focus {
 /* end list san pham */
 
 /* start chi tiet san pham */
+.detail-main {
+    background-color: #F4F4F4;
+}
+
 .dm-top#carousel-1 .owl-nav,
 .dm-top#carousel-1 .owl-dots {
     display: none;
@@ -3848,6 +3808,7 @@ input:focus {
 
 .product-detail .pd-nav .pdn-item .nav-link {
     border: unset;
+    background-color: transparent;
 }
 
 .product-detail .pd-nav .pdn-item .nav-link span {
@@ -3870,6 +3831,22 @@ input:focus {
 
 .product-detail .pd-tab {
     padding: 1rem 0;
+}
+
+.product-detail .pd-tab .pdt-content p,
+.product-detail .pd-tab .pdt-content span,
+.product-detail .pd-tab .pdt-content strong,
+.product-detail .pd-tab .pdt-content em {
+    font: normal normal 16px/19px "Roboto";
+    color: #3A3732;
+}
+
+.product-detail .pd-tab .pdt-content strong {
+    font-weight: 700;
+}
+
+.product-detail .pd-tab .pdt-content em {
+    font-style: italic;
 }
 
 .s-share {
@@ -3895,6 +3872,8 @@ input:focus {
 
 .s-share .ss-nav .nav-link {
     color: #B8BBCB;
+    padding: 8px 12px;
+    font-size: 24px;
 }
 
 .product-navigation {
@@ -3965,17 +3944,14 @@ input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: #F4F4F4;
 }
 
 .product-navigation .pn-container .pnc-center-text h4 {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    font: normal 600 14px/17px "Helvetica Neue";
     text-align: center;
     color: #1F4386;
+    background-color: #F4F4F4;
     margin-bottom: unset;
 }
 
@@ -3984,11 +3960,7 @@ input:focus {
 }
 
 .product-relative .pr-title {
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
+    font: normal 600 36px/44px "Helvetica Neue";
     text-align: center;
     color: #1F4386;
     width: 100%;
@@ -4008,9 +3980,9 @@ input:focus {
 }
 
 .product-relative .pr-item .pri-container:hover .pri-container_overlay {
-    display: flex;
-    width: 100%;
     height: 100%;
+    visibility: visible;
+    opacity: 1;
 }
 
 .product-relative .pr-item .pri-container img {
@@ -4021,19 +3993,21 @@ input:focus {
 }
 
 .product-relative .pr-item .pri-container .pri-container_overlay {
-    display: none;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 50%;
+    visibility: hidden;
+    opacity: 0;
     background: rgba(255, 255, 255, 0.65);
     flex-direction: column;
     z-index: 1;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    transition: height 2s, width 2s;
+    transition: .5s all ease-in;
 }
 
 .product-relative .pr-item .pri-container .pri-container_overlay h4 {
@@ -4050,6 +4024,26 @@ input:focus {
     width: 30px;
     height: 30px;
     margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1199px) {
+    .product-relative .pr-item .pri-container .pri-container_overlay {
+        height: 30%;
+        top: 70%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .product-relative .pr-item .pri-container .pri-container_overlay h4 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .product-relative .pr-item .pri-container .pri-container_overlay img {
+        width: 20px;
+        height: 20px;
+        margin-top: .8rem;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -4095,6 +4089,17 @@ input:focus {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    position: relative;
+}
+
+.footer-area::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 1rem;
+    left: 0;
 }
 
 .footer-area .footer-pera p {
@@ -4102,6 +4107,15 @@ input:focus {
     font-size: 16px;
     margin-bottom: 50px;
     line-height: 1.8
+}
+
+.footer-area .nav-f-social .nav-link {
+    padding: 8px 12px;
+    font-size: 24px;
+}
+
+.footer-area .nav-f-social .nav-link a i{
+    font-size: 24px;
 }
 
 .footer-area .footer-pera.footer-pera2 p {
@@ -4316,33 +4330,25 @@ del {
 }
 
 .cf-container .cfc-contact h3 {
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 44px;
-    line-height: 54px;
+    font: normal bold 44px/54px "Helvetica Neue";
     color: #1F4386;
 }
 
 .cf-container .cfc-contact p {
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+    font: normal bold 16px/19px "Helvetica Neue";
     color: #3A3732;
 }
 
+.cf-container .cfc-contact form {
+    margin-top: 2.6rem;
+}
+
 .cf-container .cfc-contact .cf-input {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    margin-bottom: 10px;
+    font: normal normal 16px/19px "Helvetica Neue";
+    margin-bottom: 16px;
     color: #3A3732;
     background-color: transparent;
-    border: none;
+    border: unset;
     border-bottom: 1px solid #E2E2E2;
 }
 
@@ -4367,7 +4373,7 @@ del {
     border-radius: unset;
     background: #1F4386;
     text-align: center;
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -4389,7 +4395,7 @@ del {
 .cf-container .cfc-info {
     position: relative;
     background-color: #1F4386;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .cf-container .cfc-info::before {
@@ -4403,12 +4409,9 @@ del {
 }
 
 .cf-container .cfc-info h3 {
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 37px;
+    font: normal bold 30px/37px "Helvetica Neue";
     color: #FFFFFF;
+    margin-bottom: 2.8rem;
 }
 
 .cf-container .cfc-info img {
@@ -4428,11 +4431,7 @@ del {
 }
 
 .cf-container .cfc-info p {
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
+    font: normal normal 16px/19px "Helvetica Neue";
     color: #FFFFFF;
 }
 

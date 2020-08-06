@@ -167,4 +167,18 @@
         sync1.trigger('to.owl.carousel', [number, 100, true]);
     });
 
+    jQuery('.btn-app').hover(function () {
+        jQuery('.btn-app img').attr('src', './assets/img/long-arrow-right.svg')
+      }, function () {
+        jQuery('.btn-app img').attr('src', './assets/img/long-arrow-right-white.svg')
+      }
+    );
+
+    jQuery('.btn-app').focus(function () {
+      var src = jQuery('.btn-app img').attr('src') = './assets/img/long-arrow-right.svg' ? './assets/img/long-arrow-right-white.svg' : './assets/img/long-arrow-right.svg';
+      jQuery('.btn-app img').attr('src', src);
+    }
+    
+  );
+    
 })(jQuery);
