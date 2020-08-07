@@ -113,10 +113,15 @@
 
     sync1.owlCarousel({
         items: 1,
+        responsive : {
+            768 : {
+                items : 2,
+            }
+        },
         slideSpeed: 2000,
         nav: false,
         dots: false,
-        autoHeight: true,
+        autoWidth: true,
         loop: true,
         responsiveRefreshRate: 200,
         onChanged: syncPosition,
