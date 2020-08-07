@@ -2084,42 +2084,42 @@ input:focus::-moz-placeholder {
 }
 
 .footer-padding {
-    padding-top: 70px;
-    padding-bottom: 60px
+    padding-top: 50px;
+    padding-bottom: 40px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .footer-padding {
-        padding-top: 75px;
-        padding-bottom: 60px
+        padding-top: 55px;
+        padding-bottom: 40px
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .footer-padding {
-        padding-top: 50px;
-        padding-bottom: 35px
+        padding-top: 30px;
+        padding-bottom: 15px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-padding {
-        padding-top: 50px;
-        padding-bottom: 35px
+        padding-top: 30px;
+        padding-bottom: 15px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .footer-padding {
-        padding-top: 35px;
-        padding-bottom: 35px
+        padding-top: 30px;
+        padding-bottom: 15px
     }
 }
 
 @media (max-width: 575px) {
     .footer-padding {
-        padding-top: 35px;
-        padding-bottom: 35px
+        padding-top: 30px;
+        padding-bottom: 15px
     }
 }
 
@@ -2641,7 +2641,7 @@ input:focus {
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(161, 161, 161, 0.65);
     z-index: 99999
 }
 
@@ -3549,6 +3549,14 @@ input:focus {
     padding: 1rem 0;
 }
 
+.section-pagination .sp-next {
+    margin-left: 1rem;
+}
+
+.section-pagination .sp-prev {
+    margin-right: 1rem;
+}
+
 .section-pagination .sp-next,
 .section-pagination .sp-prev,
 .section-pagination .sp-page {
@@ -3861,7 +3869,7 @@ input:focus {
 }
 
 .product-detail .pd-nav .pdn-item .nav-link span {
-    font: normal 500 18px/22px Helvetica;
+    font: normal 600 18px/22px Helvetica;
     text-align: center;
     color: #000000;
     padding-bottom: 4px;
@@ -4002,7 +4010,7 @@ input:focus {
 }
 
 .product-relative .pr-title {
-    font: normal 600 36px/44px Helvetica;
+    font: normal normal 36px/44px Helvetica;
     text-align: center;
     color: #1F4386;
     width: 100%;

@@ -14,26 +14,24 @@
     });
   };
 
-  /* 7.  Custom Sticky Menu  */
-  jQuery(window).on('scroll', function () {
-    var scroll = jQuery(window).scrollTop();
-    if (scroll < 245) {
-      jQuery(".header-sticky").removeClass("sticky-bar");
-    } else {
-      jQuery(".header-sticky").addClass("sticky-bar");
-    }
-  });
+  // /* 7.  Custom Sticky Menu  */
+  // jQuery(window).on('scroll', function () {
+  //   var scroll = jQuery(window).scrollTop();
+  //   if (scroll < 245) {
+  //     jQuery(".header-sticky").removeClass("sticky-bar");
+  //   } else {
+  //     jQuery(".header-sticky").addClass("sticky-bar");
+  //   }
+  // });
 
-  jQuery(window).on('scroll', function () {
-    var scroll = jQuery(window).scrollTop();
-    if (scroll < 245) {
-      jQuery(".header-sticky").removeClass("sticky");
-    } else {
-      jQuery(".header-sticky").addClass("sticky");
-    }
-  });
-
-
+  // jQuery(window).on('scroll', function () {
+  //   var scroll = jQuery(window).scrollTop();
+  //   if (scroll < 245) {
+  //     jQuery(".header-sticky").removeClass("sticky");
+  //   } else {
+  //     jQuery(".header-sticky").addClass("sticky");
+  //   }
+  // });
 
   /* 8. sildeBar scroll */
   jQuery.scrollUp({
@@ -46,7 +44,6 @@
     scrollText: '<i class="fas fa-level-up-alt"></i>', // Text for element
     activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
   });
-
 
   /* 9. data-background */
   jQuery("[data-background]").each(function () {
