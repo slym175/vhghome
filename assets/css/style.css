@@ -2945,7 +2945,7 @@ input:focus {
 .sa-carousel .item {
     position: relative;
     width: 100vw;
-    height: auto;
+    height: calc(100vh - 66px);
 }
 
 .sa-carousel .item img {
@@ -3075,20 +3075,27 @@ input:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
 }
 
-.all-collection .ac-body .acb-right p {
+.all-collection .ac-body .acb-right .p-container {
     margin: 2rem 0 1rem 0;
     text-align: center;
     font: normal 500 19px/23px Helvetica;
     line-height: 1.5;
-    width: 65%;
+    width: 100%;
+}
+
+.all-collection .ac-body .acb-right .p-container p {
+    margin: .6rem 0;
+    text-align: center;
+    font: normal 500 19px/23px Helvetica;
+    line-height: 1.5;
 }
 
 .all-collection .ac-body .acb-right a {
     margin-bottom: 1rem;
-    width: 50%;
+    width: 30%;
     padding: 1rem 1.8rem;
 }
 
@@ -3100,36 +3107,41 @@ input:focus {
     opacity: .8;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .all-collection .ac-body .acb-right .m-width {
-        width: 70%;
-    }
-
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .all-collection .ac-body .acb-right a {
-        width: 70%;
+        margin-bottom: 1rem;
+        width: 35%;
+        padding: 1rem 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .all-collection .ac-body .acb-right a {
+        width: 40%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .all-collection .ac-body .acb-right .m-width {
-        width: 90%;
-    }
-
-    
     .all-collection .ac-body .acb-right a {
-        width: 70%;
+        width: 50%;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .all-collection .ac-body .acb-right .m-width {
-        width: 80%;
+    .all-collection .ac-body .acb-right a {
+        width: 40%;
     }
 }
 
-@media (max-width: 575px) {
-    .all-collection .ac-body .acb-right .m-width {
-        width: 100%;
+@media only screen and (min-width: 400px) and (max-width: 575px) {
+    .all-collection .ac-body .acb-right a {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .all-collection .ac-body .acb-right a {
+        width: 80%;
     }
 }
 
@@ -3138,7 +3150,7 @@ input:focus {
 
 /* start newest catalog section */
 .newest-catalog {
-    padding: 250px 0;
+    padding: 200px 0;
 }
 
 .newest-catalog:hover {
@@ -3192,6 +3204,29 @@ input:focus {
     font: normal bold 36px/44px Helvetica;
     color: #FFFFFF;
     transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.sa-banner .sab-page-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #FFFFFF;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.sa-banner .sab-page-title::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+    width: 40px;
+    height: 1px;
+    background-color: #FFFFFF;
+    transform: translate(50%, -50%) rotate(-45deg);
 }
 
 .about-section {
@@ -3389,7 +3424,7 @@ input:focus {
     }
 
     .newest-catalog {
-        padding: 150px 0;
+        padding: 120px 0;
     }
 }
 
@@ -3959,10 +3994,11 @@ input:focus {
     color: #1F4386;
     background-color: #F4F4F4;
     margin-bottom: unset;
+    padding: 20% 0;
 }
 
 .product-relative {
-    padding: 1rem 0;
+    padding: 1rem 0 5rem 0;
 }
 
 .product-relative .pr-title {
@@ -4307,6 +4343,10 @@ del {
 } */
 
 /* start contact */
+.contact-main {
+    background-color: #EFEFEF;
+}
+
 .sa-map {
     width: 100%;
     max-height: 400px;
@@ -4356,6 +4396,7 @@ del {
     background-color: transparent;
     border: unset;
     border-bottom: 1px solid #E2E2E2;
+    padding: .5rem .75rem;
 }
 
 .cf-container .cfc-contact .cf-input:focus {
@@ -4385,6 +4426,7 @@ del {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    padding: .75rem;
     margin-top: 20px;
 }
 
@@ -4402,7 +4444,10 @@ del {
 .cf-container .cfc-info {
     position: relative;
     background-color: #1F4386;
-    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 .cf-container .cfc-info::before {
