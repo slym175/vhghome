@@ -1829,6 +1829,13 @@ input:focus::-moz-placeholder {
     padding-right: 200px
 }
 
+@media only screen and (min-width: 992px) {
+    .px-lg-100 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
 .padding-bottom {
     padding-bottom: 250px
 }
@@ -2557,11 +2564,13 @@ input:focus {
 }
 
 .mobile_menu .slicknav_menu .slicknav_btn {
-    top: -25px
+    top: -25px;
 }
 
 .mobile_menu .slicknav_menu .slicknav_btn .slicknav_icon-bar {
-    background-color: #079147 !important
+    background-color: #079147 !important;
+    width: 23px;
+    height: 2px;
 }
 
 .mobile_menu .slicknav_menu .slicknav_nav {
@@ -2585,7 +2594,7 @@ input:focus {
 
 .mobile_menu .slicknav_menu .slicknav_nav a {
     font-size: 15px;
-    padding: 7px 10px
+    padding: 7px 10px;
 }
 
 .mobile_menu .slicknav_menu .slicknav_nav .slicknav_item a {
@@ -2791,120 +2800,6 @@ input:focus {
     overflow: hidden;
 }
 
-.slider-area .hero__img {
-    position: relative
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-    .slider-area .hero__img {
-        left: -104px
-    }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .slider-area .hero__img img {
-        height: 500px
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .slider-area .hero__img img {
-        height: 500px
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .slider-area .hero__img img {
-        height: 400px
-    }
-}
-
-.slider-area .hero__caption {
-    overflow: hidden
-}
-
-@media (max-width: 575px) {
-    .slider-area .hero__caption {
-        padding-top: 38px;
-        padding-left: 22px
-    }
-}
-
-.slider-area .hero__caption h1 {
-    text-transform: normal;
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 26px
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .slider-area .hero__caption h1 {
-        font-size: 60px;
-        line-height: 1.2
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .slider-area .hero__caption h1 {
-        font-size: 50px;
-        line-height: 1.2
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .slider-area .hero__caption h1 {
-        font-size: 35px;
-        line-height: 1.2;
-        margin-bottom: 26px
-    }
-}
-
-@media (max-width: 575px) {
-    .slider-area .hero__caption h1 {
-        font-size: 33px;
-        line-height: 1.2;
-        margin-bottom: 26px
-    }
-}
-
-.slider-area .hero__caption p {
-    font-size: 17px;
-    line-height: 1.6;
-    font-weight: 400;
-    margin-bottom: 39px;
-    color: #212025;
-    margin-bottom: 60px;
-    padding-right: 50px
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .slider-area .hero__caption p {
-        padding-right: 0px;
-        margin-bottom: 30px
-    }
-}
-
-@media (max-width: 575px) {
-    .slider-area .hero__caption p {
-        margin-bottom: 30px;
-        padding-right: 0px;
-        margin-bottom: 30px
-    }
-}
-
-.slider-area .hero-cap h2 {
-    font-size: 70px;
-    font-weight: 700;
-    text-transform: capitalize
-}
-
-@media (max-width: 575px) {
-    .slider-area .hero-cap h2 {
-        font-size: 28px
-    }
-}
-
 .slide-bg {
     background: #f0f0f2
 }
@@ -2945,7 +2840,15 @@ input:focus {
 .sa-carousel .item {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 66px);
+    height: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+    .sa-carousel .item {
+        position: relative;
+        width: 100vw;
+        height: calc(100vh - 66px);
+    }
 }
 
 .sa-carousel .item img {
@@ -2970,12 +2873,16 @@ input:focus {
 
 /* end slider */
 
+main {
+    margin-top: 67px;
+}
+
 .btn-app {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font: normal normal 18px/21px Helvetica;
-    width: 45%;
+    width: 230px;
     margin-top: 1rem;
     padding: 1.2rem 2.5rem;
     background-color: #1F4386;
@@ -3010,13 +2917,25 @@ input:focus {
     background-color: #079147;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 12px);
 }
 
 /* start newest collection section */
 .newest-collection {
     background-color: #F4FAFF;
-    padding: 1.5rem 0;
+    padding: 2.5rem 100px;
+}
+
+@media only screen and (max-width: 991px) {
+    .newest-collection {
+        background-color: #F4FAFF;
+        padding: 2rem 1rem;
+    }
+}
+
+.newest-collection .nc-head {
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 .newest-collection .nc-head span {
@@ -3033,11 +2952,40 @@ input:focus {
     height: 3px;
     background-color: #079147;
     bottom: 0;
-    transform: translate(80%, 100%);
+    left: 50%;
+    transform: translate(-50%, 12px);
 }
 
-.newest-collection .nc-body {
-    margin-top: 2rem;
+.newest-collection .nc-body .img-fluid{
+    width: 100%;
+}
+
+.newest-collection .nc-body .ncb-item div{
+    margin: 0 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .newest-collection .nc-body .ncb-item div{
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .newest-collection .nc-head {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .newest-collection .nc-body .ncb-item div{
+        margin: 0;
+    }
+}
+
+.newest-collection .nc-body .ncb-item h4 {
+    margin-top: 1rem;
+    text-align: center;
+    font: normal 600 24px/29px Helvetica;
+    color: #1F4386;
 }
 
 .newest-collection .nc-body .ncb-item h4 {
@@ -3055,9 +3003,8 @@ input:focus {
 }
 
 .newest-collection .nc-body .btn-app {
-    width: 250px;
+    width: 210px;
 }
-
 /* end newest collection section */
 
 /* start all collection section */
@@ -3095,7 +3042,7 @@ input:focus {
 
 .all-collection .ac-body .acb-right a {
     margin-bottom: 1rem;
-    width: 30%;
+    width: 210px;
     padding: 1rem 1.8rem;
 }
 
@@ -3110,43 +3057,11 @@ input:focus {
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .all-collection .ac-body .acb-right a {
         margin-bottom: 1rem;
-        width: 35%;
         padding: 1rem 1.8rem;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .all-collection .ac-body .acb-right a {
-        width: 40%;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .all-collection .ac-body .acb-right a {
-        width: 50%;
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .all-collection .ac-body .acb-right a {
-        width: 40%;
-    }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 575px) {
-    .all-collection .ac-body .acb-right a {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 399px) {
-    .all-collection .ac-body .acb-right a {
-        width: 80%;
-    }
-}
-
 /* end all collection section */
-
 
 /* start newest catalog section */
 .newest-catalog {
@@ -3170,9 +3085,8 @@ input:focus {
 }
 
 .newest-catalog .ncat-body .btn-app {
-    width: 250px;
+    width: 260px;
 }
-
 /* start newest catalog section */
 /* end trang chu */
 
@@ -3380,7 +3294,7 @@ input:focus {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 50%;
+        width: 230px;
         margin-top: 1rem;
         padding: 1rem 1.5rem;
         font-weight: 14;
@@ -3460,7 +3374,7 @@ input:focus {
     color: #1F4386;
     position: relative;
     text-align: center;
-    margin: 1rem 0 2rem 0;
+    margin: 3rem 0 4rem 0;
 }
 
 .category-main .cm-title::before {
@@ -3479,16 +3393,16 @@ input:focus {
     -webkit-column-count: 2;
     column-count: 2;
     column-fill: auto;
-    column-gap: 22px;
-    -moz-column-gap: 22px;
-    -webkit-column-gap: 22px;
+    column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    -webkit-column-gap: 4rem;
     width: 100%;
 }
 
 .category-main .cmg-item {
     width: 100%;
     height: auto;
-    margin: 0 0 5px 0;
+    margin: 0 0 2rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -3503,10 +3417,6 @@ input:focus {
 
 .category-main .cmg-item:hover .cmg-img-container img{
     transform: scale(1.1);
-}
-
-.category-main .cmg-item:first-child {
-    margin-top: 3rem;
 }
 
 .category-main .cmg-item .cmg-img-container {
@@ -3546,7 +3456,7 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 0 4rem 0;
 }
 
 .section-pagination .sp-next {
@@ -3611,7 +3521,7 @@ input:focus {
     color: #1F4386;
     position: relative;
     text-align: center;
-    margin: 1rem 0 2rem 0;
+    margin: 3rem 0 4rem 0;
 }
 
 .list-product .lp-title::before {
@@ -3630,8 +3540,8 @@ input:focus {
     text-align: center;
     color: #343434;
     text-align: center;
-    margin-bottom: 2rem;
-    width: 75%;
+    margin-bottom: 3rem;
+    width: 65%;
 }
 
 .list-product .lp-gallery {
@@ -3639,16 +3549,16 @@ input:focus {
     -webkit-column-count: 3;
     column-count: 3;
     column-fill: auto;
-    column-gap: 22px;
-    -moz-column-gap: 22px;
-    -webkit-column-gap: 22px;
+    column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    -webkit-column-gap: 4rem;
     width: 100%;
 }
 
 .list-product .lpg-item {
     width: 100%;
     height: auto;
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -4019,7 +3929,11 @@ input:focus {
 
 @media only screen and (max-width: 767px) {
     .product-relative .pr-item {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-navigation .pn-container .pnc-center-text {
+        display: none;
     }
 }
 
@@ -4108,7 +4022,7 @@ input:focus {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 767px) {
     .product-relative .pr-item .pri-container {
         height: 400px;
     }
@@ -4405,6 +4319,7 @@ del {
     border: unset;
     border-bottom: 1px solid #E2E2E2;
     padding: .5rem .75rem;
+    border-radius: unset;
 }
 
 .cf-container .cfc-contact .cf-input:focus {
